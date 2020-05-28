@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>:: XL Reader ::</title>
+    <link rel="stylesheet" href="index.css">
+    <script lang="javascript" src="./xlsx.full.min.js"></script>
+    <script lang="javascript" src="./FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script> -->
+</head>
+
+<body>
+    <!-- <div class="component file-upload" id="component-file-upload">
+        <input type="file" onchange="handleFileSelect(event)">
+    </div> -->
+    <div class="component dashboard" id="component-dashboard">
+        <div class="sidemenu" id="sidemenu"></div>
+        <div class="body" id="dashboard-body">
+            <div class="action">
+                <div>
+                    <button onclick="renderSheet()">Table View</button>
+                    <button onclick="renderJSON()">JSON View</button>
+                </div>
+                <div>
+                    <input type="file" onchange="handleFileSelect(event)">
+                    <button onclick="openModal()">Upload new JSON</button>
+                </div>
+            </div>
+            <div id="table-view">
+                <table id="data-table"></table>
+            </div>
+            <div id="json-view">
+                <div id="json-type-head"></div>
+                <div id="json-type-data"></div>
+            </div>
+        </div>
+        <div class="modal-wrapper" id="modal" style="display: none">
+            <div class="modal">
+                <div class="modal-heading">
+                    <h2>Upload JSON of English Keys</h2>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="deptName" value="NewDepartment">
+                    <input type="file" onchange="readJSON(event)">
+                </div>
+                <div style="margin-top: 10px;">
+                    <button onclick=" createNewExel()" ">Create New Excel</button>
+                    <button onclick=" closeModal()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+
+</html>
